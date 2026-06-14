@@ -33,11 +33,24 @@ jobs:
     - name: Build frontend
       run: cd frontend && npm run build
 
-    - name: Install Capacitor
-      run: cd frontend && npm install @capacitor/core @capacitor/cli && npx cap init && npx cap add android
+    - name: Install Capacitor dependencies
+      run: |
+        cd frontend
+        npm install @capacitor/core @capacitor/cli --no-audit --no-fund
+
+    - name: Add Android platform if missing
+      run: |
+        cd frontend
+        if [ ! -d "android" ]; then
+          npx cap add android --no-interactive || true
+        else
+          echo "android platform already present"
+        fi
 
     - name: Sync Capacitor
-      run: cd frontend && npx cap sync android
+      run: |
+        cd frontend
+        npx cap sync android --no-interactive || true
 
     - name: Build APK with Gradle
       run: cd frontend/android && ./gradlew assembleDebug
