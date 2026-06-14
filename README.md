@@ -3,11 +3,11 @@
 An augmented reality application for learning and reciting Islamic prayers (dua) with AR visualization.
 
 ## Features
-- 📱 AR Scanner for interactive doa visualization
-- 📚 Comprehensive doa database with Arabic text, Latin transliteration, and meaning
-- 🏃 Progress tracking for learning
-- 🎯 Interactive practice mode
-- 📍 Location-based AR markers
+- AR Scanner for interactive doa visualization
+- Comprehensive doa database with Arabic text, Latin transliteration, and meaning
+- Progress tracking for learning
+- Interactive practice mode
+- Location-based AR markers
 
 ## Project Structure
 ```
@@ -111,4 +111,4 @@ Visit `Releases` tab on GitHub to download the latest APK
 MIT
 
 ## Author
-Your Name
+Xion
