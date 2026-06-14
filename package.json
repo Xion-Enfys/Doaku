@@ -1,0 +1,21 @@
+{
+  "name": "doku-ar-app",
+  "version": "1.0.0",
+  "description": "DoaKu AR Application - Full Stack",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "install": "npm install",
+    "start": "concurrently \"npm start --workspace=backend\" \"npm start --workspace=frontend\"",
+    "dev": "concurrently \"npm run dev --workspace=backend\" \"npm start --workspace=frontend\"",
+    "backend": "npm start --workspace=backend",
+    "frontend": "npm start --workspace=frontend",
+    "build": "npm run build --workspace=frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

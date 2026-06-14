@@ -1,0 +1,63 @@
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        'surface': '#f7fbf0',
+        'surface-dim': '#d7dbd2',
+        'surface-bright': '#f7fbf0',
+        'surface-container-lowest': '#ffffff',
+        'surface-container-low': '#f1f5eb',
+        'surface-container': '#ebefe5',
+        'surface-container-high': '#e5eadf',
+        'surface-container-highest': '#e0e4da',
+        'on-surface': '#181d17',
+        'on-surface-variant': '#40493d',
+        'inverse-surface': '#2d322b',
+        'inverse-on-surface': '#eef2e8',
+        'outline': '#707a6c',
+        'outline-variant': '#bfcaba',
+        'surface-tint': '#1b6d24',
+        'primary': '#0d631b',
+        'on-primary': '#ffffff',
+        'primary-container': '#2e7d32',
+        'on-primary-container': '#cbffc2',
+        'inverse-primary': '#88d982',
+        'secondary': '#735c00',
+        'on-secondary': '#ffffff',
+        'secondary-container': '#fdd34d',
+        'on-secondary-container': '#725b00',
+        'tertiary': '#005a8a',
+        'on-tertiary': '#ffffff',
+        'tertiary-container': '#0073b0',
+        'on-tertiary-container': '#e8f2ff',
+        'error': '#ba1a1a',
+        'on-error': '#ffffff',
+        'error-container': '#ffdad6',
+        'on-error-container': '#93000a',
+        'background': '#f7fbf0',
+        'on-background': '#181d17',
+      },
+      fontFamily: {
+        'arabic': ['Amiri', 'serif'],
+      },
+      animation: {
+        'float': 'float 3s ease-in-out infinite',
+        'pulse-slow': 'pulse-slow 3s ease-in-out infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        'pulse-slow': {
+          '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+          '50%': { opacity: '0.8', transform: 'scale(0.98)' },
+        },
+      },
+    },
+  },
+  plugins: [],
+}

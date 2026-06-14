@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+
+@layer base {
+  body {
+    @apply bg-gray-50;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  
+  .font-arabic {
+    font-family: 'Amiri', 'Traditional Arabic', serif;
+    font-size: 1.5rem;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700 transition-all duration-200 shadow-md hover:shadow-lg;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl shadow-md p-4 hover:shadow-lg transition-shadow duration-200;
+  }
+  
+  .pill-button-shadow {
+    box-shadow: 0 4px 0 0 #084112;
+  }
+  
+  .pill-button-shadow:active {
+    box-shadow: 0 0px 0 0 #084112;
+    transform: translateY(4px);
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(0.98); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+}
+
+.animate-bounce {
+  animation: bounce 0.3s ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-green-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-green-500;
+}
+
+/* Safe area for bottom navigation */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Glass morphism */
+.glass-panel {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* Progress bar gloss */
+.progress-gloss::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: inherit;
+}
